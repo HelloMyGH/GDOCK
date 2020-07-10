@@ -62,6 +62,7 @@ jobs:
     - name: Load custom configuration
       run: |
         cp -f BeikeYun.config ./lede/.config
+        cd lede
         make defconfig
 
     - name: Download package
