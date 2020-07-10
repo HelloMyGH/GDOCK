@@ -52,9 +52,6 @@ jobs:
       run: |
         git clone https://github.com/coolsnowwolf/lede lede
         cd lede/package/lean/
-        git clone https://github.com/jerrykuku/lua-maxminddb.git
-        git clone https://github.com/jerrykuku/luci-app-vssr.git
-        cd ../../..
 
     - name: Update feeds
       run: cd lede && ./scripts/feeds update -a
@@ -64,10 +61,7 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        cp -f gdockfull128.config ./lede/.config
-        chmod +x diy.sh
-         cd lede
-        ../diy.sh
+        cp -f BeikeYun.config ./lede/.config
         make defconfig
 
     - name: Download package
