@@ -50,8 +50,7 @@ jobs:
 
     - name: Clone source code
       run: |
-        git clone https://github.com/coolsnowwolf/lede lede
-        cd lede/package/lean/
+        git clone https://github.com/HelloMyGH/Lienol_openwt.git lede
 
     - name: Update feeds
       run: cd lede && ./scripts/feeds update -a
